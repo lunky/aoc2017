@@ -9,7 +9,15 @@ import Data.List
 
 -- start at (0,0)
 day3 :: Int -> Int
-day3 input = (\(x,y)-> (abs x + abs y)-1) $ foldr(\x acc -> move x acc) (0,0) $ take input $ route
+day3 input = (\(x,y)-> (abs x + abs y)-1) $ 
+                foldr(\x acc -> move x acc) (0,0) $ take input $ route
+
+day3b :: Int -> Int
+day3b input = head $  
+                map snd $ 
+                foldl' (\acc x-> (rank x acc) : acc ) [] $ 
+                scanl'(\acc x -> move x acc) (0,0) $ 
+                take (input -1) route
 
 
 route :: [String]
@@ -40,5 +48,5 @@ move "left"  (x,y) = (x-1,y)
 move "down"  (x,y) = (x,y-1)
 
     
-day3b :: Int -> Int
-day3b input = (\(x,y)-> (abs x + abs y)-1) $ foldl'(\acc x -> move x acc) (0,0) $ take input $ route
+
+
