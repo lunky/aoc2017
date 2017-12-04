@@ -5,6 +5,7 @@ module Lib
 
 import Day1
 import Day2
+import Day4
 
 readLines :: FilePath -> IO [String]
 readLines = fmap lines . readFile
@@ -22,4 +23,10 @@ someFunc =  do
     putStrLn ("day2: " ++ answer)
     let answer = show $ day2b contents
     putStrLn ("day2b: " ++ answer)
+    
+    contents <- readFile "input/4.txt"
+    let answer = show $ day4  contents
+    putStrLn ("day4: " ++ answer)
+    let answer = show $ day4b contents
+    putStrLn ("day4b: " ++ answer)
     
