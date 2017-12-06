@@ -31,9 +31,11 @@ someFunc =  do
     let answer = show $ day4b contents
     putStrLn ("day4b: " ++ answer)
     
-    contents <- readFile "input/5.txt"
+--    contents <- readFile "input/5.txt"
 --    let answer = show $ day5  contents
 --    putStrLn ("day5: " ++ answer)
-    let answer = show $ day5b  contents
-    putStrLn ("day5b: " ++ answer)
+    putStrLn ("day5: " ++ "too slow to run")
+--    let answer = show $ day5b  contents
+--    putStrLn ("day5b: " ++ answer)
+    putStrLn ("day5b: " ++ "too slow to run")
     
