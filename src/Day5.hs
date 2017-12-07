@@ -7,6 +7,7 @@ module Day5
     where
 import Data.Vector ((!), (//))
 import qualified Data.Vector as V
+import qualified Data.Vector.Unboxed.Mutable as M
 
 day5 :: String -> Int
 day5 input = move 0 0 $ V.fromList $ map (\y -> (read y)::Int ) $ lines input
@@ -32,8 +33,3 @@ moveB count start list
 
 day5b :: String -> Int
 day5b input = moveB 0 0 $ V.fromList $ map (\y -> (read y)::Int ) $ lines input
-
-
--- current index
--- list 
--- 
