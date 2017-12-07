@@ -7,6 +7,7 @@ import Day1
 import Day2
 import Day4
 import Day5
+import Day6
 
 readLines :: FilePath -> IO [String]
 readLines = fmap lines . readFile
@@ -39,3 +40,9 @@ someFunc =  do
 --    putStrLn ("day5b: " ++ answer)
     putStrLn ("day5b: " ++ "too slow to run")
     
+
+    contents <- readFile "input/6.txt"
+    let answer = show $ day6 contents
+    putStrLn ("day6: " ++ answer)
+    let answer = show $ day6b contents
+    putStrLn ("day6b: " ++ answer)
