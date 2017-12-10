@@ -1,7 +1,6 @@
 module Day1Spec where
 
 import Day1
-import Lib
 import Test.Hspec
 
 spec :: Spec

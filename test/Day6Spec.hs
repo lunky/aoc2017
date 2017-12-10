@@ -1,6 +1,5 @@
 module Day6Spec where
 import Day6
-import Lib
 import Test.Hspec
 
 main :: IO ()

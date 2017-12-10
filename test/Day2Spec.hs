@@ -1,6 +1,5 @@
 module Day2Spec (main, spec) where
 import Day2
-import Lib
 import Test.Hspec
 
 -- `main` is here so that this module can be run from GHCi on its own.  It is
