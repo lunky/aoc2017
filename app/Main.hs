@@ -7,6 +7,9 @@ import Day5
 import Day6
 import Day7
 
+import Data.List
+import Data.Function
+
 readLines :: FilePath -> IO [String]
 readLines = fmap lines . readFile
 
@@ -50,3 +53,4 @@ main =  do
     putStrLn ("day7: " ++ answer)
     let answer = show $ day7b contents
     putStrLn ("day7b: " ++ answer)
+    
