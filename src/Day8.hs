@@ -3,17 +3,22 @@ module Day8
     day8
    ,day8b
    ,calculate
+   ,input
     )
     where
 import qualified Data.Map as Map
+import Data.List (foldl', scanl')
 
 day8 :: String -> Int
-day8 input = do 
-    let theMap = Map.empty
-    pickMax $ foldr (\y registers-> calculate (words y) registers) theMap $ lines input
---day8 input = 0
+day8 input = pickMax $ foldl' (\registers y-> calculate (words y) registers) Map.empty $ lines input
+    
+day8b :: String -> Int
+day8b input = maximum $ map (\y -> pickMax y) $ scanl' (\registers y-> calculate (words y) registers) Map.empty $ lines input
+    
 pickMax :: Map.Map String Int -> Int
-pickMax input = maximum $ map (\(key,val) -> val) $ Map.toList input
+pickMax input 
+    | Map.null input = 0
+    | otherwise = maximum $ map (\(key,val) -> val) $ Map.toList input
 
 -- "b inc 5 if a > 1"
 --calculate :: [a] -> Map.Map String a -> Map.Map String a
@@ -26,7 +31,7 @@ calculate (register:[operation,val,_,testRegister,comparison,comparisonValue]) r
         registers
 
 setRegister :: String -> Int -> Map.Map String Int -> Map.Map String Int
-setRegister testRegister newVal registers = Map.insertWith (+) testRegister newVal registers
+setRegister testRegister newVal registers = Map.insert testRegister newVal registers
 
 getRegister :: String -> Map.Map String Int -> Int
 getRegister testRegister registers = case (Map.lookup testRegister registers) of 
@@ -47,5 +52,3 @@ testIf "<="  x y = x <= y
 testIf ">="  x y = x >= y
 testIf "!="  x y = x /= y
 
-day8b :: String -> Int
-day8b input = 0
