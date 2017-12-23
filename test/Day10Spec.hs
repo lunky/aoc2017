@@ -32,9 +32,15 @@ spec = do
       let input = ([3,0,1,2,4],1,skipSize)
       let expected = ([0,3,4,2,1],4,skipSize+1)
       twist' input count `shouldBe` expected
-    describe "9 Day10" $ do
+    describe "Day10" $ do
       it "should perform simple twist"  $ do 
         let input = "3,4,1,5"
         let window = [0..4]
         let expected = 12
         day10 input window `shouldBe` expected
+    describe "Day10b" $ do
+      it "should perform knot hash"  $ do 
+        let input =""
+        let window = [0..255]
+        let expected = "a2582a3a0e66e6e86e3812dcb672a272"
+        day10b input window `shouldBe` expected

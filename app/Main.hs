@@ -72,7 +72,7 @@ main =  do
     contents <- readFile "input/10.txt"
     let answer = show $ day10 contents [0..255]
     putStrLn ("day10: " ++ answer)
-    let answer = show $ day10b contents
+    let answer = show $ day10b contents [0..255]
     putStrLn ("day10b: " ++ answer)
     
     
