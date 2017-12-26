@@ -11,7 +11,6 @@ module Day7
    ,childWeights
     )
     where
-import Data.Function (on)
 import Data.String (fromString)
 import Data.List (find, groupBy, group, nub, sortOn, sort)
 import Data.Maybe
