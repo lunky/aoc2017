@@ -20,7 +20,7 @@ description:         Please see the README on Github at <https://github.com/lunk
 library
   hs-source-dirs:      src
   exposed-modules:     Day1, Day2, Day3, Day4, Day5, Day6, Day7, Day8, Day9,
-                       Day10, Day11, Day12
+                       Day10, Day11, Day12, Day13
   build-depends:       base >= 4.7 && < 5
                      , text
                      , vector
@@ -49,7 +49,7 @@ test-suite aoc-test
   default-language:    Haskell2010
   other-modules:     Day1Spec,  Day2Spec,  Day3Spec,  Day4Spec,  Day5Spec,
                      Day6Spec,  Day7Spec,  Day8Spec,  Day9Spec,  Day10Spec,
-                     Day11Spec, Day12Spec
+                     Day11Spec, Day12Spec, Day13Spec
 
 source-repository head
   type:     git

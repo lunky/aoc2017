@@ -11,6 +11,7 @@ import Day9
 import Day10
 import Day11
 import Day12
+import Day13
 
 import Data.List
 import Data.Function
@@ -88,3 +89,9 @@ main =  do
     putStrLn ("day12: " ++ answer)
     let answer = show $ day12b contents
     putStrLn ("day12b: " ++ answer)
+    
+    contents <- readFile "input/13.txt"
+    let answer = show $ day13 contents 
+    putStrLn ("day13: " ++ answer)
+    let answer = show $ day13b contents
+    putStrLn ("day13b: " ++ answer)
