@@ -12,6 +12,7 @@ import Day10
 import Day11
 import Day12
 import Day13
+import Day14
 
 import Data.List
 import Data.Function
@@ -72,11 +73,11 @@ main =  do
     let answer = show $ day9b contents
     putStrLn ("day9b: " ++ answer)
     
-    --contents <- readFile "input/10.txt"
-    --let answer = show $ day10 contents [0..255]
-    --putStrLn ("day10: " ++ answer)
-    --let answer = show $ day10b contents [0..255]
-    --putStrLn ("day10b: " ++ answer)
+    contents <- readFile "input/10.txt"
+    let answer = show $ day10 contents [0..255]
+    putStrLn ("day10: " ++ answer)
+    let answer = show $ day10b contents [0..255]
+    putStrLn ("day10b: " ++ answer)
     
     contents <- readFile "input/11.txt"
     let answer = show $ day11 contents 
@@ -93,5 +94,12 @@ main =  do
     contents <- readFile "input/13.txt"
     let answer = show $ day13 contents 
     putStrLn ("day13: " ++ answer)
-    let answer = show $ day13b contents
-    putStrLn ("day13b: " ++ answer)
+    --let answer = show $ day13b contents
+    --putStrLn ("day13b: " ++ answer)
+    putStrLn ("day13b: " ++ "too slow to run")
+    
+    let contents = "jxqlasbh"
+    let answer = show $ day14 contents 
+    putStrLn ("day14: " ++ answer)
+    let answer = show $ day14b contents
+    putStrLn ("day14b: " ++ answer)
