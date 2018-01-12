@@ -101,5 +101,7 @@ main =  do
     let contents = "jxqlasbh"
     let answer = show $ day14 contents 
     putStrLn ("day14: " ++ answer)
-    let answer = show $ day14b contents
-    putStrLn ("day14b: " ++ answer)
+--    let answer = show $ day14b contents
+--    putStrLn ("day14b: " ++ answer)
+    putStrLn ("day14b: " ++ "too slow to run")
+    
