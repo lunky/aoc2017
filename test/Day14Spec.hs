@@ -80,8 +80,9 @@ spec = do
             
 
 -- too slow to run
---  describe "day14b" $ do
---    it "should count regions" $ do 
---      let input = "flqrgnkx"
---      let expected =1242 
---      day14b input `shouldBe` expected
+  describe "day14b" $ do
+    it "should count regions" $ do 
+      pendingWith "too slow to run"
+      let input = "flqrgnkx"
+      let expected =1242 
+      day14b input `shouldBe` expected

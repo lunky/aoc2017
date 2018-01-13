@@ -107,8 +107,10 @@ main =  do
 --    putStrLn ("day14b: " ++ answer)
     putStrLn ("day14b: " ++ "too slow to run")
     
-    contents <- readFile "input/15.txt"
-    let answer = show $ day15 40000000 contents 
-    putStrLn ("day15: " ++ answer)
-    let answer = show $ day15b 5000000 contents
-    putStrLn ("day15b: " ++ answer)
+--    contents <- readFile "input/15.txt"
+--    let answer = show $ day15 40000000 contents 
+--    putStrLn ("day15: " ++ answer)
+    putStrLn ("day15b: " ++ "too slow to run")
+--    let answer = show $ day15b 5000000 contents
+--    putStrLn ("day15b: " ++ answer)
+    putStrLn ("day15b: " ++ "too slow to run")

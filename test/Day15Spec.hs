@@ -12,6 +12,7 @@ spec = do
       1 `shouldBe` 1
   describe "Day15" $ do
     it "should produce the judges final count" $ do
+       pendingWith "too slow to run"
        let input = "Generator A starts with 65\nGenerator B starts with 8921"
        let count = 40000000
        let expected = 588
@@ -25,9 +26,11 @@ spec = do
       let input = (65,8921)
       let expected = (1092455, 430625591)
       generator input `shouldBe` expected
+-- too slow
   describe "Day15" $ do
     it "should produce the judges final count" $ do
-       let input = "Generator A starts with 65\nGenerator B starts with 8921"
-       let count = 5000000
-       let expected = 309
-       day15b count input `shouldBe` expected
+      pendingWith "too slow to run"
+      let input = "Generator A starts with 65\nGenerator B starts with 8921"
+      let count = 5000000
+      let expected = 309
+      day15b count input `shouldBe` expected

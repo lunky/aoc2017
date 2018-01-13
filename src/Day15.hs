@@ -9,6 +9,7 @@ module Day15
     
 import Text.Printf
 import Data.Bits
+import System.Directory
     
 
 day15 :: Int -> String -> Int 
