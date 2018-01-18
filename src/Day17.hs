@@ -13,7 +13,13 @@ day17 :: Int -> Int
 day17 increment = (\(idx, list)-> list !! (idx+1)) $ foldl' advance' (0,[0]) [1..2017]
     where advance' = advance increment
 
-advance increment (index,list) value= 
+advance increment (index,list) value = (next,insertAt (next) value list)
+    where 
+          next 
+            | index+increment >= (length list) = 1 + (index+increment) `rem` (length list)
+            | otherwise = 1 + index + increment
+-- recursion 
+advance2 increment (index,list) value= 
     (\(x,y) -> (x,insertAt (x) value y )) $  adv increment (index,list)
     where  adv counter (curr,list) 
                 | counter == 0   = (curr+1, list )

@@ -29,6 +29,11 @@ spec = do
             let state =  (2,[0,2,3,1])
             let expected =  (2,[0,2,4,3,1])
             advance 3 state input `shouldBe` expected
+        it "should follow the example (2,[0,2,3,1])" $ do
+            let input = 5
+            let state =  (2,[0,2,4,3,1])
+            let expected =  (1,[0,5,2,4,3,1])
+            advance 3 state input `shouldBe` expected
             
             
     describe "Day17" $ do
