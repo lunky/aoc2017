@@ -1,3 +1,4 @@
+{-# LANGUAGE BangPatterns #-}
 module Day17
     ( 
     day17
@@ -26,14 +27,16 @@ insertAt z y xs = as ++ (y:bs)
 
 day17b :: Int -> Int 
 day17b increment = snd $ foldl' advance' (0,0) [1..50000000]
-    where advance' = advanceB increment
+    where advance' = spin increment
 -- this version doesn't even track a list, that was using all the memory on my laptop
 -- even though this version doesn't use a list it still uses a tonne of ram for some reason
--- I don't know why. TODO -- fix RAM usage
--- maybe a pure recursive version?
-advanceB increment (index,element1) value = (next,if(next==1) then (value) else element1)
-    where 
-          next 
-            | indexNIncrement >= value = 1 + (indexNIncrement) `rem` (value)
-            | otherwise = 1 + indexNIncrement
-          indexNIncrement = index + increment
+spin increment (!index,!element1) spinNumber = (next,nextElementOne)
+  where
+    next 
+      | indexNIncrement >= spinNumber = 1 + (indexNIncrement `rem` spinNumber)
+      | otherwise = 1 + indexNIncrement
+    indexNIncrement = index + increment
+    nextElementOne
+      | next==1 = spinNumber
+      | otherwise = element1
+          
