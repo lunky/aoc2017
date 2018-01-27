@@ -125,8 +125,8 @@ main =  do
 --    putStrLn ("day16b: " ++ answer)
     
     let input = 366 -- my input 
-    let answer = show $ day17 input 
-    putStrLn ("day17: " ++ answer)
-    
+--    let answer = show $ day17 input 
+--    putStrLn ("day17: " ++ answer)
+--    
     let answer = show $ day17b input 
     putStrLn ("day17b: " ++ answer)
