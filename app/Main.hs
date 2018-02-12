@@ -120,18 +120,19 @@ main =  do
 --    putStrLn ("day15b: " ++ "too slow to run")
 --    
 --    contents <- readFile "input/16.txt"
---    let answer = show $ day16 ['a'..'p'] contents 
---    putStrLn ("day16: " ++ answer)
-    --let answer = show $ day16b 1000000000 ['a'..'p'] contents
---    let answer = show $ day16b 1000 ['a'..'p'] contents
+--    let answer = show $ day16 contents ['a'..'p'] 
+----    putStrLn ("day16: " ++ answer)
+--    let answer = show $ day16b 1000000000 ['a'..'p'] contents
 --    putStrLn ("day16b: " ++ answer)
-    
+
 --    let input = 366 -- my input 
 --    let answer = show $ day17 input 
 --    putStrLn ("day17: " ++ answer)
---    
+    
 --    let answer = show $ day17b input 
 --    putStrLn ("day17b: " ++ answer)
---    contents <- readFile "input/19.txt"
---    let answer = show $ day19 contents 
---    putStrLn ("day19: " ++ answer)
+    contents <- readFile "input/18.txt"
+    let answer = show $ day18 contents
+    putStrLn ("day18: " ++ answer)
+    let answer = show $ day18b contents
+    putStrLn ("day18b: " ++ answer)
