@@ -53,7 +53,7 @@ spec = do
             let input = "<<<<>"
             let expected = 3
             day9b input `shouldBe` expected
-        it "should parse chars"  $ do 
+        it "should parse first > is canceled."  $ do 
             let input = "<{!>}>"
             let expected = 2
             day9b input `shouldBe` expected

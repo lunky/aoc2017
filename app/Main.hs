@@ -16,6 +16,8 @@ import Day14
 import Day15
 import Day16
 import Day17
+import Day18
+import Day19
 
 import Data.List
 import Data.Function
@@ -117,17 +119,21 @@ main =  do
 ----    putStrLn ("day15b: " ++ answer)
 --    putStrLn ("day15b: " ++ "too slow to run")
 --    
---    contents <- readFile "input/16.txt"
---    let answer = show $ day16 ['a'..'p'] contents 
+   -- contents <- readFile "input/16.txt"
+   -- let answer = show $ day16 ['a'..'p'] contents 
 --    putStrLn ("day16: " ++ answer)
     --let answer = show $ day16b 1000000000 ['a'..'p'] contents
---    let answer = show $ day16b 1000 ['a'..'p'] contents
---    putStrLn ("day16b: " ++ answer)
+   -- let answer = show $ day16b 1000 ['a'..'p'] contents
+   -- putStrLn ("day16b: " ++ answer)
     
-    let input = 366 -- my input 
-    let input2 = 50000000
+--    let input = 366 -- my input 
 --    let answer = show $ day17 input 
 --    putStrLn ("day17: " ++ answer)
 --    
-    let answer = show $ day17b input input2
-    putStrLn ("day17b: " ++ answer)
+--    let answer = show $ day17b input 
+--    putStrLn ("day17b: " ++ answer)
+    contents <- readFile "input/19.txt"
+    let answer = show $ day19 contents 
+    putStrLn ("day19: " ++ answer)
+    let answer = show $ day19b contents 
+    putStrLn ("day19b: " ++ answer)
